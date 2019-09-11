@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/dynamic-initiative-tracker/static/css/main.2cce8147.chunk.css",
-    "main.js": "/dynamic-initiative-tracker/static/js/main.1817b6eb.chunk.js",
-    "main.js.map": "/dynamic-initiative-tracker/static/js/main.1817b6eb.chunk.js.map",
-    "runtime~main.js": "/dynamic-initiative-tracker/static/js/runtime~main.170e89f8.js",
-    "runtime~main.js.map": "/dynamic-initiative-tracker/static/js/runtime~main.170e89f8.js.map",
-    "static/js/2.fdf7a50f.chunk.js": "/dynamic-initiative-tracker/static/js/2.fdf7a50f.chunk.js",
-    "static/js/2.fdf7a50f.chunk.js.map": "/dynamic-initiative-tracker/static/js/2.fdf7a50f.chunk.js.map",
+    "main.css": "/dynamic-initiative-tracker/static/css/main.34de6062.chunk.css",
+    "main.js": "/dynamic-initiative-tracker/static/js/main.5c841db1.chunk.js",
+    "main.js.map": "/dynamic-initiative-tracker/static/js/main.5c841db1.chunk.js.map",
+    "runtime~main.js": "/dynamic-initiative-tracker/static/js/runtime~main.16d8fb2f.js",
+    "runtime~main.js.map": "/dynamic-initiative-tracker/static/js/runtime~main.16d8fb2f.js.map",
+    "static/js/2.90610918.chunk.js": "/dynamic-initiative-tracker/static/js/2.90610918.chunk.js",
+    "static/js/2.90610918.chunk.js.map": "/dynamic-initiative-tracker/static/js/2.90610918.chunk.js.map",
     "index.html": "/dynamic-initiative-tracker/index.html",
-    "precache-manifest.f48c3b2cec322557d46af687807c1a0d.js": "/dynamic-initiative-tracker/precache-manifest.f48c3b2cec322557d46af687807c1a0d.js",
+    "precache-manifest.6370f40a42b1c9877a0c87cb5cdcd5bb.js": "/dynamic-initiative-tracker/precache-manifest.6370f40a42b1c9877a0c87cb5cdcd5bb.js",
     "service-worker.js": "/dynamic-initiative-tracker/service-worker.js",
-    "static/css/main.2cce8147.chunk.css.map": "/dynamic-initiative-tracker/static/css/main.2cce8147.chunk.css.map",
-    "static/media/logo.svg": "/dynamic-initiative-tracker/static/media/logo.5d5d9eef.svg"
+    "static/css/main.34de6062.chunk.css.map": "/dynamic-initiative-tracker/static/css/main.34de6062.chunk.css.map"
   }
 }
