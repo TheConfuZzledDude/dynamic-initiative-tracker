@@ -8,6 +8,11 @@
     }
   },
   "rules": {
+      "react/jsx-props-no-spreading": [0,{
+          "html" : "ignore",
+          "custom": "ignore",
+          "exceptions": []
+      }] ,
     "react/jsx-filename-extension": [
       1,
       {

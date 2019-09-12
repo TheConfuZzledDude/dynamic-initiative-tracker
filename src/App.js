@@ -5,13 +5,15 @@ import React, { useState, useReducer, useEffect } from "react";
 import { Input, Paper, Button, Typography } from "@material-ui/core";
 import uuid from "uuid/v4";
 
-const ADD_ENTRY = Symbol("ADD_ENTRY");
-const POP_ENTRY = Symbol("POP_ENTRY");
+import Event from "./Event";
+
+import { ADD_ENTRY, POP_ENTRY, REMOVE_ENTRY, MODIFY_ENTRY } from "./enums";
 
 export default () => {
   const [eventDescription, setEventDescription] = useState("");
   const [repetitions, setRepetitions] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [maxDuration, setMaxDuration] = useState(0);
   const [triggeredEvent, setTriggeredEvent] = useState(null);
 
   const queueReducer = (state, action) => {
@@ -37,7 +39,6 @@ export default () => {
         const [nextEvent, ...newState] = state;
         if (!nextEvent) return state;
         setTriggeredEvent(nextEvent);
-        console.log(nextEvent, nextEvent.repeat, !!nextEvent.repeat);
         return [
           ...newState.map(event => ({
             ...event,
@@ -53,6 +54,15 @@ export default () => {
               ]
             : [])
         ].sort(({ prio: prio1 }, { prio: prio2 }) => prio1 - prio2);
+      }
+      case REMOVE_ENTRY: {
+        const newState = [...state];
+        const { id } = action;
+        newState.splice(
+          newState.findIndex(({ id: entryId }) => id === entryId),
+          1
+        );
+        return newState;
       }
       default: {
         return state;
@@ -85,11 +95,8 @@ export default () => {
       </Paper>
 
       <Paper style={{ height: "70vh", margin: "20px 20px", overflowY: "auto" }}>
-        {queue.map(({ id, description, prio, repeat }) => (
-          <Paper key={id}>
-            {prio} ticks ({prio / 4} seconds) | {description}{" "}
-            {repeat > 0 && `| ${repeat} more times`}
-          </Paper>
+        {queue.map(({ id, ...props }) => (
+          <Event key={id} dispatch={dispatch} {...props} />
         ))}
       </Paper>
       <div>
@@ -105,6 +112,14 @@ export default () => {
           onChange={({ target: { value } }) => setDuration(parseInt(value, 10))}
         />
         <Input
+          placeholder="Max Durations"
+          type="number"
+          defaultValue={0}
+          onChange={({ target: { value } }) =>
+            setMaxDuration(parseInt(value, 10))
+          }
+        />
+        <Input
           placeholder="Repetitions"
           type="number"
           defaultValue={-1}
@@ -118,7 +133,7 @@ export default () => {
             dispatch({
               type: ADD_ENTRY,
               prio: duration,
-              maxPrio: duration,
+              maxPrio: maxDuration,
               repeat: repetitions,
               description: eventDescription
             })
