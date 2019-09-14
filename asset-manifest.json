@@ -1,15 +1,13 @@
 {
   "files": {
-    "main.css": "/dynamic-initiative-tracker/static/css/main.34de6062.chunk.css",
-    "main.js": "/dynamic-initiative-tracker/static/js/main.565410ff.chunk.js",
-    "main.js.map": "/dynamic-initiative-tracker/static/js/main.565410ff.chunk.js.map",
+    "main.js": "/dynamic-initiative-tracker/static/js/main.e3abb1d7.chunk.js",
+    "main.js.map": "/dynamic-initiative-tracker/static/js/main.e3abb1d7.chunk.js.map",
     "runtime~main.js": "/dynamic-initiative-tracker/static/js/runtime~main.16d8fb2f.js",
     "runtime~main.js.map": "/dynamic-initiative-tracker/static/js/runtime~main.16d8fb2f.js.map",
-    "static/js/2.472b4df0.chunk.js": "/dynamic-initiative-tracker/static/js/2.472b4df0.chunk.js",
-    "static/js/2.472b4df0.chunk.js.map": "/dynamic-initiative-tracker/static/js/2.472b4df0.chunk.js.map",
+    "static/js/2.68a1b110.chunk.js": "/dynamic-initiative-tracker/static/js/2.68a1b110.chunk.js",
+    "static/js/2.68a1b110.chunk.js.map": "/dynamic-initiative-tracker/static/js/2.68a1b110.chunk.js.map",
     "index.html": "/dynamic-initiative-tracker/index.html",
-    "precache-manifest.c5b5d5f95c04c5da61756ca75e0a4cbe.js": "/dynamic-initiative-tracker/precache-manifest.c5b5d5f95c04c5da61756ca75e0a4cbe.js",
-    "service-worker.js": "/dynamic-initiative-tracker/service-worker.js",
-    "static/css/main.34de6062.chunk.css.map": "/dynamic-initiative-tracker/static/css/main.34de6062.chunk.css.map"
+    "precache-manifest.bda31f299aa32caaf8800d5d2763204c.js": "/dynamic-initiative-tracker/precache-manifest.bda31f299aa32caaf8800d5d2763204c.js",
+    "service-worker.js": "/dynamic-initiative-tracker/service-worker.js"
   }
 }
