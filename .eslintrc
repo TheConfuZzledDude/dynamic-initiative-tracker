@@ -27,6 +27,8 @@
     }
   },
   "rules": {
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" , "varsIgnorePattern": "^_"}],
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" , "varsIgnorePattern": "^_"}],
     "no-undef": "off",
     "eqeqeq": ["error"],
     "react/jsx-props-no-spreading": [

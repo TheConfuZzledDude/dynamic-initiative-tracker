@@ -1,0 +1,35 @@
+diff --git a/node_modules/react-dnd-html5-backend/dist/esm/HTML5Backend.js b/node_modules/react-dnd-html5-backend/dist/esm/HTML5Backend.js
+index 79e6ad2..2379655 100644
+--- a/node_modules/react-dnd-html5-backend/dist/esm/HTML5Backend.js
++++ b/node_modules/react-dnd-html5-backend/dist/esm/HTML5Backend.js
+@@ -184,7 +184,11 @@ function () {
+       }
+     };
+ 
+-    this.handleTopDragEndCapture = function () {
++    this.handleTopDragEndCapture = function (delayed) {
++        if (!delayed) {
++            setTimeout(() => this.handleTopDragEndCapture(true), 100)
++            return;
++        }
+       if (_this.clearCurrentDragSourceNode()) {
+         // Firefox can dispatch this event in an infinite loop
+         // if dragend handler does something like showing an alert.
+diff --git a/node_modules/react-dnd-html5-backend/lib/HTML5Backend.js b/node_modules/react-dnd-html5-backend/lib/HTML5Backend.js
+index f04db69..d2bedad 100644
+--- a/node_modules/react-dnd-html5-backend/lib/HTML5Backend.js
++++ b/node_modules/react-dnd-html5-backend/lib/HTML5Backend.js
+@@ -136,7 +136,12 @@ export default class HTML5Backend {
+                 e.preventDefault();
+             }
+         };
+-        this.handleTopDragEndCapture = () => {
++        this.handleTopDragEndCapture = (delayed) => {
++        if (!delayed) {
++            setTimeout(() => this.handleTopDragEndCapture(true), 100)
++            return;
++        }
++
+             if (this.clearCurrentDragSourceNode()) {
+                 // Firefox can dispatch this event in an infinite loop
+                 // if dragend handler does something like showing an alert.

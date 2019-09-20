@@ -3,8 +3,11 @@
 import { Button, Paper, TextField } from "@material-ui/core";
 import { red } from "@material-ui/core/colors";
 import React, { useState } from "react";
+import { useDrag, DropTargetMonitor, useDrop } from "react-dnd";
+import uuid from "uuid";
 import EventAction from "./actions/EventAction";
 import ActionType from "./actions/ActionType";
+import StatusEffect from "./status_effects/StatusEffect";
 
 type EventPropTypes = {
   time: number;
@@ -23,8 +26,14 @@ const Event: React.FC<EventPropTypes> = ({
 }: EventPropTypes) => {
   const [durationModifier, setDurationModifier] = useState(0);
 
+  const [_collectedProps, drop] = useDrop({
+    accept: "STATUS_EFFECT",
+    drop: (item: StatusCard, monitor: DropTargetMonitor): object | void => {}
+  });
+
   return (
     <Paper
+      ref={drop}
       style={{
         display: "flex",
         margin: 10,

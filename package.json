@@ -11,6 +11,9 @@
     "@types/react-dom": "^16.9.0",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
+    "react-dnd": "^9.3.4",
+    "react-dnd-html5-backend": "^9.3.4",
+    "react-dnd-mouse-backend": "^1.0.0-rc.2",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1",
     "typescript": "^3.6.3",
@@ -23,14 +26,11 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "repl": "local-repl"
+    "repl": "local-repl",
+    "postinstall": "patch-package"
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
+    "production": [">0.2%", "not dead", "not op_mini all"],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
@@ -54,10 +54,9 @@
     "eslint-plugin-react-hooks": "^2.0.1",
     "gh-pages": "^2.1.1",
     "local-repl": "^4.0.0",
+    "patch-package": "^6.2.0",
+    "postinstall-postinstall": "^2.0.0",
     "prettier": "^1.18.2"
   },
-  "repl": [
-    "fastpriorityqueue",
-    "uuid/v4"
-  ]
+  "repl": ["fastpriorityqueue", "uuid/v4"]
 }

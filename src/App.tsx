@@ -11,6 +11,7 @@ import EventQueue from "./EventQueue";
 import EventQueueItem from "./EventQueueItem";
 import AddEvent from "./actions/AddEvent";
 import PopEvent from "./actions/PopEvent";
+import StatusCard from "./StatusCard";
 
 const App: React.FC = () => {
   const [eventDescription, setEventDescription] = useState("");
@@ -103,17 +104,39 @@ const App: React.FC = () => {
           }`}
       </Paper>
 
-      <Paper
+      <div
         style={{
           height: "60vh",
-          margin: "20px calc(20px + 15%)",
-          overflowY: "auto"
+          margin: "20px calc(20px + 8%)",
+          display: "grid",
+          gridTemplateColumns: "1.5fr 1fr"
         }}
       >
-        {queue.map(({ id, ...props }) => (
-          <Event key={id} dispatch={dispatch} id={id} {...props} />
-        ))}
-      </Paper>
+        <Paper
+          style={{
+            margin: 5,
+            overflowY: "auto",
+            padding: 10
+          }}
+        >
+          {queue.map(({ id, ...props }) => (
+            <Event key={id} dispatch={dispatch} id={id} {...props} />
+          ))}
+        </Paper>
+
+        <Paper
+          style={{
+            margin: 5,
+            overflowY: "auto",
+            padding: 10
+          }}
+        >
+          <StatusCard>Stun</StatusCard>
+          <StatusCard>Poison</StatusCard>
+          <StatusCard>Incapacitated</StatusCard>
+        </Paper>
+      </div>
+
       <div
         style={{
           display: "flex",
