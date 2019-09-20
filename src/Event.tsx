@@ -8,6 +8,7 @@ import uuid from "uuid";
 import EventAction from "./actions/EventAction";
 import ActionType from "./actions/ActionType";
 import StatusEffect from "./status_effects/StatusEffect";
+import StatusCard from "./StatusCard";
 
 type EventPropTypes = {
   time: number;
@@ -28,7 +29,7 @@ const Event: React.FC<EventPropTypes> = ({
 
   const [_collectedProps, drop] = useDrop({
     accept: "STATUS_EFFECT",
-    drop: (item: StatusCard, monitor: DropTargetMonitor): object | void => {}
+    drop: (_item: any, _monitor: DropTargetMonitor): object | void => {}
   });
 
   return (

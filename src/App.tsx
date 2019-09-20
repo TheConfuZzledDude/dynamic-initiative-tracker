@@ -28,7 +28,7 @@ const App: React.FC = () => {
         if (description) {
           return [
             ...state,
-            new EventQueueItem(time, maxTime, repeat, description)
+            new EventQueueItem(time, maxTime, repeat, description, {})
           ].sort(({ time: time1 }, { time: time2 }) => time1 - time2);
         }
         return state;

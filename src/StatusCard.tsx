@@ -10,6 +10,8 @@ type StatusCardPropTypes = {
   children?: React.ReactNode;
 };
 
+type StatusCard = React.FC<StatusCardPropTypes>;
+
 const StatusCard: React.FC<StatusCardPropTypes> = ({
   children
 }: StatusCardPropTypes) => {
